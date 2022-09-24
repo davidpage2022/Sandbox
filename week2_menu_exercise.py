@@ -1,5 +1,11 @@
-"""Week 2 menu exercise"""
+"""Week 2 menu exercise
+menu:
+- get valid (non-empty) name
+- print greeting with lines
+- print secret name (random variation)
+"""
 import random
+
 MENU = """(N)ame
 (G)reeting
 (S)ecret name
@@ -17,12 +23,12 @@ def main():
         elif choice == "G":
             print_greeting(name)
         elif choice == "S":
-            name = get_secret_name()
-            print(name)
+            print_secret_name(name)
         else:
             print("Invalid choice")
         print(MENU)
         choice = input(">>>").upper()
+    print("Thank you")
 
 
 def get_valid_name():
@@ -34,15 +40,26 @@ def get_valid_name():
 
 
 def print_greeting(name):
-    print(f"Hello {name}!")
-    for character in name:
-        print(character)
-    print("-------------------------------------")
+    greeting = "Hello "
+    i = len(name) + len(greeting)
+    print_line(i)
+    print(f"{greeting}{name}")
+    print_line(i)
 
 
-def get_secret_name():
-    first_names = [ "John", "Jane", "Larry", "Mary", "Alexander" ]
-    second_names = [ "Smith", "Doe", "King", "Queen", "Monroe" ]
+def print_line(length):
+    print("-" * length)
+
+
+def print_secret_name(name):
+    letters = list(name)
+    random.shuffle(letters)
+    print("".join(letters))
+
+
+def get_new_secret_name():
+    first_names = ["John", "Jane", "Larry", "Mary", "Alexander"]
+    second_names = ["Smith", "Doe", "King", "Queen", "Monroe"]
     return f"{random.choice(first_names)} {random.choice(second_names)}"
 
 
