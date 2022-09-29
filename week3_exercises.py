@@ -88,11 +88,11 @@
 #     print(name, file=out_file)
 
 
-names = ["Larry", "Joe", "Jane"]
+strings = ["Larry", "Joe", "Jane"]
 
-for i, name in enumerate(names, 1):
-    with open(name + ".txt", "w") as out_file:
-        print(name, file=out_file)
+for i, string in enumerate(strings, 1):
+    with open(string + ".txt", "w") as out_file:
+        print(string, file=out_file)
         print(i, file=out_file)
 
 
