@@ -82,7 +82,17 @@
 
 # Use a list
 
+#
+# name = input("Name: ")
+# with open("name.txt", "w") as out_file:
+#     print(name, file=out_file)
 
-name = input("Name: ")
-with open("name.txt", "w") as out_file:
-    print(name, file=out_file)
+
+names = ["Larry", "Joe", "Jane"]
+
+for i, name in enumerate(names, 1):
+    with open(name + ".txt", "w") as out_file:
+        print(name, file=out_file)
+        print(i, file=out_file)
+
+
