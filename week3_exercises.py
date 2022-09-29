@@ -13,7 +13,6 @@
 #
 # main()
 
-
 # with open("data_test.csv", "r") as in_file:
 #     in_file.readline()  # Ignore header.
 #     for line in in_file:
@@ -71,5 +70,19 @@
 ######################################################
 
 
+# Printing number of errors
+
+# number_of_errors = 0
+# ...
+#     exception ...:
+#         number_of_errors += 1
+# ...
+# if number_of_errors > 0:
+#     print(f"There were {number_of_errors} errors")
+
+# Use a list
 
 
+name = input("Name: ")
+with open("name.txt", "w") as out_file:
+    print(name, file=out_file)
