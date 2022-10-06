@@ -38,15 +38,15 @@ def main():
 
 
 def get_numbers():
-    user_input = input("Enter numbers separated by commas: ")
+    text = input("Enter numbers separated by commas: ")
     is_input_valid = False
     while not is_input_valid:
         try:
-            numbers = [float(x) for x in user_input.split(",")]
+            numbers = [float(x) for x in text.split(",")]
             is_input_valid = True
         except ValueError:
             print("Invalid number entered")
-            user_input = input("Enter numbers separated by commas: ")
+            text = input("Enter numbers separated by commas: ")
     return numbers
 
 
