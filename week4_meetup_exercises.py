@@ -56,8 +56,7 @@ def square_numbers(numbers):
 
 
 def display_numbers(numbers):
-    numbers.sort()
-    formatted_numbers = [f"{number:.1f}" for number in numbers]
+    formatted_numbers = [f"{number:.1f}" for number in sorted(numbers)]
     print("..".join(formatted_numbers))
 
 
