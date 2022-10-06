@@ -37,11 +37,6 @@ def main():
     display_numbers(numbers)
 
 
-# def square_numbers(user_input):
-#     for number in [int(x) for x in user_input.split(",")]:
-#         number **= 2
-
-
 def get_numbers():
     user_input = "1,4.5,90, -2, 8,2"  # input("Enter numbers separated by commas: ")
     is_input_valid = False
