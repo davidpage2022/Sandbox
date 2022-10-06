@@ -38,7 +38,7 @@ def main():
 
 
 def get_numbers():
-    user_input = "1,4.5,90, -2, 8,2"  # input("Enter numbers separated by commas: ")
+    user_input = input("Enter numbers separated by commas: ")
     is_input_valid = False
     while not is_input_valid:
         try:
