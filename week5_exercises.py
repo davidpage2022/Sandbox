@@ -1,6 +1,10 @@
 """Week 5 exercises"""
 
-data = [['Derek', 7], ['Xavier', 80], ['Bob', 612], ['Chantanelle', 9]]
+data = [['Derek', 7], ['Xavier', 80], ['Bob', 612], ['Chantanelley', 9]]
 
+max_length = 0
 for person, score in data:
-    print(f"{person:11} = {score:>3}")
+    if len(person) > max_length:
+        max_length = len(person)
+for person, score in data:
+    print(f"{person:{max_length}} = {score:>3}")
