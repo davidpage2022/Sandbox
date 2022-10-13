@@ -17,16 +17,23 @@
 #     #     print(f"Choice must be a valid number")
 
 
-from operator import itemgetter
+# from operator import itemgetter
+#
+# score_pairs = [['Derek', 7], ['Carrie', 8], ['Bob', 6]]
+#
+# parts = input("Enter name and score (e.g. \"Dave 5\"): ").split()
+# name = parts[0]
+# score = int(parts[1])
+#
+# score_pairs.append([name, score])
+# score_pairs.sort(key=itemgetter(1), reverse=True)
+#
+# print(score_pairs)
 
-score_pairs = [['Derek', 7], ['Carrie', 8], ['Bob', 6]]
 
-parts = input("Enter name and score (e.g. \"Dave 5\"): ").split()
-name = parts[0]
-score = int(parts[1])
+text = "This is a sentence"
 
-score_pairs.append([name, score])
-score_pairs.sort(key=itemgetter(1), reverse=True)
+long_words = [word for word in text.split() if len(word) > 3]
 
-print(score_pairs)
+print(long_words)
 
