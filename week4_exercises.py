@@ -1,5 +1,6 @@
 """Week 4 exercises"""
 
+
 # names = ["Dave", "Page", "Craig", "Me"]
 #
 # is_valid_choice = False
@@ -31,9 +32,22 @@
 # print(score_pairs)
 
 
-text = "This is a sentence"
+# text = "This is a sentence"
+#
+# long_words = [word for word in text.split() if len(word) > 3]
+#
+# print(long_words)
 
-long_words = [word for word in text.split() if len(word) > 3]
 
-print(long_words)
+def process_query_string(query):
+    args = query[1:].split("&")
+    pairs = [tuple(arg.split("=")) for arg in args]
+    for i, pair in enumerate(pairs):
+        if pair[1].isnumeric():
+            pairs[i] = (pair[0], int(pair[1]))
+    return pairs
 
+
+query_string = "?name=Bob&age=99&day=Wed"
+
+print(process_query_string(query_string))
