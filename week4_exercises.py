@@ -39,9 +39,6 @@
 # print(long_words)
 
 
-def process_query_string(query):
-
-
 def main():
     string = "?name=Bob&age=99&day=Wed"
 
