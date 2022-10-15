@@ -18,21 +18,33 @@ from operator import itemgetter
 #     print(f"{name:{max_length}} = {number:>3}")
 
 
-def main():
-    names = ["Dave", "Susan", "Jane"]
-    ages = [45, 55, 35]
-
-    print(find_oldest_person(names, ages))
-
-
-def find_oldest_person(names, ages):
-    oldest_person = names[0]
-    oldest_age = ages[0]
-    for i in range(len(names)):
-        if ages[i] > oldest_age:
-            oldest_person = names[i]
-            oldest_age = ages[i]
-    return oldest_person
+# def main():
+#     names = ["Dave", "Susan", "Jane"]
+#     ages = [45, 55, 35]
+#
+#     print(find_oldest(names, ages))
 
 
-main()
+# def find_oldest(names, ages):
+#    # return names[ages.index(max(ages))]
+#
+#    oldest_age = -1
+#    oldest_index = -1
+#    for i, age in enumerate(ages):
+#        if age > oldest_age:
+#            oldest_age = age
+#            oldest_index = i
+#    return names[oldest_index]
+#
+#    # oldest_person = names[0]
+#    # oldest_age = ages[0]
+#    # for i in range(len(names)):
+#    #     if ages[i] > oldest_age:
+#    #         oldest_person = names[i]
+#    #         oldest_age = ages[i]
+#    # return oldest_person
+
+
+# main()
+
+
