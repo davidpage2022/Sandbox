@@ -40,14 +40,36 @@
 
 
 def process_query_string(query):
-    args = query[1:].split("&")
-    pairs = [tuple(arg.split("=")) for arg in args]
-    for i, pair in enumerate(pairs):
-        if pair[1].isnumeric():
-            pairs[i] = (pair[0], int(pair[1]))
+
+
+def main():
+    string = "?name=Bob&age=99&day=Wed"
+
+    pairs = extract_pairs(string)
+    print(pairs)
+
+
+def extract_pairs(string):
+    """Extract name-value pairs as tuples in a list from a query string."""
+    pairs = []
+    parts = string[1:].split("&")
+    for part in parts:
+        pair = part.split("=")
+        try:
+            pairs.append(tuple((pair[0], int(pair[1]))))
+        except ValueError:
+            pairs.append(tuple(pair[0]))
     return pairs
 
+# def process_query_string(query):
+#     args = query[1:].split("&")
+#     pairs = [tuple(arg.split("=")) for arg in args]
+#     for i, pair in enumerate(pairs):
+#         if pair[1].isnumeric():
+#             pairs[i] = (pair[0], int(pair[1]))
+#     return pairs
 
-query_string = "?name=Bob&age=99&day=Wed"
 
-print(process_query_string(query_string))
+# query_string = "?name=Bob&age=99&day=Wed"
+
+# print(process_query_string(query_string))
