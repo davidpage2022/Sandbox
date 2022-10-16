@@ -2,7 +2,6 @@
 
 from operator import itemgetter
 
-
 # data = [['Derek', 7], ['Xavier', 80], ['Bob', 612], ['Chantanelley', 9]]
 # name_to_number = {'Derek': 7, 'Xavier': 80, 'Bob': 612, 'Chantanelley': 9}
 
@@ -48,3 +47,9 @@ from operator import itemgetter
 # main()
 
 
+name_to_age = {"Bill": 21, "Jane": 4, "Sven": 56}
+new_name = input("Enter name: ")
+new_age = int(input("Enter age: "))
+name_to_age[new_name] = new_age
+for new_name, new_age in name_to_age.items():
+    print(f"{new_name:6} - {new_age:>6}")
