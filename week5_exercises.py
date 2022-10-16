@@ -51,5 +51,6 @@ name_to_age = {"Bill": 21, "Jane": 4, "Sven": 56}
 name = input("Enter name: ")
 age = int(input("Enter age: "))
 name_to_age[name] = age
+max_length = max(len(name) for name in list(name_to_age.keys()))
 for name, age in name_to_age.items():
-    print(f"{name:6} - {age:>6}")
+    print(f"{name:{max_length}} - {age:>6}")
