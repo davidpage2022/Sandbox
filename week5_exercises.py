@@ -48,8 +48,8 @@ from operator import itemgetter
 
 
 name_to_age = {"Bill": 21, "Jane": 4, "Sven": 56}
-new_name = input("Enter name: ")
-new_age = int(input("Enter age: "))
-name_to_age[new_name] = new_age
-for new_name, new_age in name_to_age.items():
-    print(f"{new_name:6} - {new_age:>6}")
+name = input("Enter name: ")
+age = int(input("Enter age: "))
+name_to_age[name] = age
+for name, age in name_to_age.items():
+    print(f"{name:6} - {age:>6}")
