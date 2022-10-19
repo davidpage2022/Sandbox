@@ -47,10 +47,33 @@ from operator import itemgetter
 # main()
 
 
-name_to_age = {"Bill": 21, "Jane": 4, "Sven": 56}
-name = input("Enter name: ")
-age = int(input("Enter age: "))
-name_to_age[name] = age
-max_length = max(len(name) for name in list(name_to_age.keys()))
-for name, age in name_to_age.items():
-    print(f"{name:{max_length}} - {age:>6}")
+# name_to_age = {"Bill": 21, "Jane": 4, "Sven": 56}
+# name = input("Enter name: ")
+# age = int(input("Enter age: "))
+# name_to_age[name] = age
+# max_length = max(len(name) for name in list(name_to_age.keys()))
+# for name, age in name_to_age.items():
+#     print(f"{name:{max_length}} - {age:>6}")
+
+
+import requests
+import json
+
+URL = "https://api.spaceflightnewsapi.net/v3/blogs"
+
+response = requests.get(URL)
+data = response.json()
+
+for item in data:
+    print(item["title"])
+
+with open("Data/SpaceflightNews-Blogs.json", "w") as out_file:
+    json.dump(data, out_file)
+
+    # print("[", file=out_file)
+    # for item in data:
+    #     line = str(item).replace("'", '"')
+    #     print(f"\t{line},", file=out_file)
+    # print("]", file=out_file)
+
+
