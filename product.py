@@ -1,3 +1,5 @@
+"""Week 6 exercises - Product"""
+
 class Product:
     def __init__(self, name="", price=0.0, is_on_sale=False):
         self.name = name
