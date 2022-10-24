@@ -1,5 +1,6 @@
 """Week 6 exercises - Product"""
 
+
 class Product:
     def __init__(self, name="", price=0.0, is_on_sale=False):
         self.name = name
@@ -29,7 +30,6 @@ p.put_on_sale(0.1)
 print(p)
 
 print(type(p))
-
 
 products = [Product("Phone", 340, False), Product("PC", 1420.95, True), Product("Plant", 24.5, True)]
 
