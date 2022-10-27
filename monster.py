@@ -11,7 +11,7 @@ class Monster:
         self.colour = colour
 
     def is_scary(self):
-        """Return whether the monster is "scary"."""
+        """Determine if monster is "scary" based on teeth and colour."""
         return self.number_of_teeth > 16 or self.colour == "red"
 
 
