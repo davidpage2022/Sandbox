@@ -1,14 +1,16 @@
 BoxLayout:
     orientation: "vertical"
-    Label:
-        text: "Not set"
-        id: main_label
+#    Label:
+#        text: "Not set"
+#        id: main_label
     Button:
         text: "one"
-        on_press: app.handle_button_press(self)
+        id: button_1
+        on_press: app.handle_button_press(self, button_2)
     Button:
         text: "two"
-        on_press: app.handle_button_press(self)
+        id: button_2
+        on_press: app.handle_button_press(self, button_1)
 #    BoxLayout:
 #        orientation: "horizontal"
 #        Button:

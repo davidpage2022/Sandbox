@@ -11,8 +11,10 @@ class HelloWorld(App):
         self.root = Builder.load_file('widget.kv')
         return self.root
 
-    def handle_button_press(self, button):
-        self.root.ids.main_label.text = f"ouch! ('{button.text}')"
+    def handle_button_press(self, button, target_id):
+        target_id.text = f"ouch! ('{button.text}')"
+
+        # self.root.ids.main_label.text = f"ouch! ('{button.text}')"
         # print(f"ouch! ('{button.text}')")
 
 
