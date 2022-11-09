@@ -11,8 +11,8 @@ class HelloWorld(App):
         self.root = Builder.load_file('widget.kv')
         return self.root
 
-    def press_button(self):
-        print("ouch!")
+    def handle_button_press(self, button):
+        print(f"ouch! ('{button.text}')")
 
 
 HelloWorld().run()
