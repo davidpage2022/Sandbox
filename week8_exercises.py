@@ -12,7 +12,8 @@ class HelloWorld(App):
         return self.root
 
     def handle_button_press(self, button):
-        print(f"ouch! ('{button.text}')")
+        self.root.ids.main_label.text = f"ouch! ('{button.text}')"
+        # print(f"ouch! ('{button.text}')")
 
 
 HelloWorld().run()
