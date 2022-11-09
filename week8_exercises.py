@@ -1,6 +1,7 @@
 """Week 8 exercises - Kivy"""
 
-from kivy.app import App, Widget
+from kivy.app import App
+from kivy.uix.widget import Widget
 
 
 class HelloWorld(App):
