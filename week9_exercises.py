@@ -8,6 +8,10 @@ class Person:
         self.name = name
         self.date_of_birth = date_of_birth
 
+    def __repr__(self):
+        date_string = datetime.datetime.strftime(self.date_of_birth, "%d/%m/%Y")
+        return f"{self.name} ({date_string})"
+
     def get_age(self) -> float:
         return datetime.date.today().year - self.date_of_birth.year
 
