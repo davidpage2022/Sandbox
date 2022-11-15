@@ -2,6 +2,8 @@
 
 import datetime
 
+DAYS_PER_YEAR = 365.2425
+
 
 class Person:
     def __init__(self, name: str, date_of_birth: datetime.date):
@@ -12,8 +14,8 @@ class Person:
         date_string = datetime.datetime.strftime(self.date_of_birth, "%d/%m/%Y")
         return f"{self.name} ({date_string})"
 
-    def get_age(self) -> float:
-        return datetime.date.today().year - self.date_of_birth.year
+    def get_age(self) -> int:
+        return int((datetime.date.today() - self.date_of_birth).days / DAYS_PER_YEAR)
 
 
 def test_person():
