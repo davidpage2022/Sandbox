@@ -20,10 +20,10 @@ class Person:
 
 
 class Student(Person):
-    def __init__(self, name, date_of_birth, student_id, course):
+    def __init__(self, student_id, course, **kwargs):
         # Person.__init__(self, name, date_of_birth)
         # super(Student, self).__init__(name, date_of_birth)
-        super().__init__(name, date_of_birth)
+        super().__init__(**kwargs)
         self.course = course
         self.id = student_id
 
@@ -38,7 +38,8 @@ def test_person():
 
 
 def test_student():
-    student = Student("Jane Doe", datetime.date(1992, 1, 1), 3523676, "Information Technology")
+    student = Student(name="Jane Doe", date_of_birth=datetime.date(1992, 1, 1),
+                      student_id=3523676, course="Information Technology")
     print(student)
     print(student.age)
 
