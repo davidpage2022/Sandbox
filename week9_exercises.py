@@ -10,9 +10,12 @@ class Person:
         self.name = name
         self.date_of_birth = date_of_birth
 
-    def __repr__(self):
+    def __str__(self):
         date_string = datetime.datetime.strftime(self.date_of_birth, "%d/%m/%Y")
         return f"{self.name} ({date_string})"
+
+    def __repr__(self):
+        return str(vars(self))
 
     @property
     def age(self) -> int:
@@ -30,6 +33,9 @@ class Student(Person):
     def __repr__(self):
         return str(vars(self))
 
+    def __str__(self):
+        return f"{super().__str__()}, student ID: {self.id}, course: {self.course}"
+
 
 class Employee(Person):
     def __init__(self, salary, **kwargs):
@@ -38,6 +44,9 @@ class Employee(Person):
 
     def __repr__(self):
         return str(vars(self))
+
+    def __str__(self):
+        return f"{super().__str__()} ${self.salary:.2f}"
 
 
 class Musician(Person):
@@ -82,6 +91,6 @@ def test_musician():
 
 if __name__ == '__main__':
     # test_person()
-    # test_student()
-    # test_employee()
-    test_musician()
+    test_student()
+    test_employee()
+    # test_musician()
