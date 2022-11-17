@@ -7,9 +7,9 @@ class SuperClass:
 
 
 class SubClass(SuperClass):
-    def __init__(self, x):
-        SuperClass.__init__(self, x)
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
 
 
-thing = SubClass(3)
+thing = SubClass(x=3)
 print(thing)
